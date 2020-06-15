@@ -2,13 +2,10 @@
 
 更新日期 2020-06-15
 
-mysql数据表
+txt数据格式
 ```
-CREATE TABLE `taobao_itemcats` (
-  `cid` int(11) NOT NULL,
-  `parent_cid` int(11) NOT NULL DEFAULT '0',
-  `name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `is_parent` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`cid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `cid`         商品所属类目ID
+  `parent_cid`  父类目ID=0时，代表的是一级的类目
+  `name`        类目名称
+  `is_parent`   该类目是否为父类目(即：该类目是否还有子类目)
 ```
